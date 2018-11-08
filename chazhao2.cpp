@@ -1,4 +1,4 @@
-// chazhao2.cpp : ¶¨Òå¿ØÖÆÌ¨Ó¦ÓÃ³ÌĞòµÄÈë¿Úµã¡£
+// chazhao2.cpp : å®šä¹‰æ§åˆ¶å°åº”ç”¨ç¨‹åºçš„å…¥å£ç‚¹ã€‚
 //
 
 #include "stdafx.h"
@@ -59,12 +59,12 @@ string UTF8ToGB(const char* str)
      WCHAR *strSrc;
      LPSTR szRes;
 
-     //»ñµÃÁÙÊ±±äÁ¿µÄ´óĞ¡
+     //è·å¾—ä¸´æ—¶å˜é‡çš„å¤§å°
      int i = MultiByteToWideChar(CP_UTF8, 0, str, -1, NULL, 0);
      strSrc = new WCHAR[i+1];
      MultiByteToWideChar(CP_UTF8, 0, str, -1, strSrc, i);
 
-     //»ñµÃÁÙÊ±±äÁ¿µÄ´óĞ¡
+     //è·å¾—ä¸´æ—¶å˜é‡çš„å¤§å°
      i = WideCharToMultiByte(CP_ACP, 0, strSrc, -1, NULL, 0, NULL, NULL);
      szRes = new CHAR[i+1];
      WideCharToMultiByte(CP_ACP, 0, strSrc, -1, szRes, i, NULL, NULL);
@@ -79,9 +79,9 @@ string UTF8ToGB(const char* str)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	std::vector<const std::string> filelist;   //¶¨ÒåÒ»¸ö´æ·Å½á¹ûÎÄ¼şÃû³ÆµÄÁ´±í
+	std::vector<const std::string> filelist;   //å®šä¹‰ä¸€ä¸ªå­˜æ”¾ç»“æœæ–‡ä»¶åç§°çš„é“¾è¡¨
 
-	//±éÀúÒ»´Î½á¹ûµÄËùÓĞÎÄ¼ş£¬»ñÈ¡ÎÄ¼şÃûÁĞ±í
+	//éå†ä¸€æ¬¡ç»“æœçš„æ‰€æœ‰æ–‡ä»¶ï¼Œè·å–æ–‡ä»¶ååˆ—è¡¨
 	find("D:\\website\\doc", filelist);
 
 	std::string lujing = "econpdf.txt";
@@ -92,8 +92,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	/**MYSQL* mydbdata = mysql_init((MYSQL*)0);
 	bool lianjiemysql = false;
-	//Á¬½ÓÊı¾İ¿â
-	if(mysql_real_connect(mydbdata, "localhost", "root", "r0g96xq_3pfvrnbh4j", "sufe", 3306, "", 0))
+	//è¿æ¥æ•°æ®åº“
+	if(mysql_real_connect(mydbdata, "localhost", "root", "**", "sufe", 3306, "", 0))
 	{
 		lianjiemysql = true;
 		char sql[256] = {0};
@@ -105,60 +105,25 @@ int _tmain(int argc, _TCHAR* argv[])
 	std::vector<int> fanhuizhi;
 	zifuchuan.resize(40);
 	fanhuizhi.resize(40);
-	zifuchuan[0] = "³ÂÏşºì";
-	zifuchuan[1] = "Xiaohong Chen";
-	zifuchuan[2] = "Ìï¹úÇ¿";
-	zifuchuan[3] = "Guoqiang Tian";
-	zifuchuan[4] = "°¬´ºÈÙ";
-	zifuchuan[5] = "Chunrong Ai";
-	zifuchuan[6] = "»ÆÏş¶«";
-	zifuchuan[7] = "Kevin Huang";
-	zifuchuan[8] = "ÕÔ½ğ»ª";
-	zifuchuan[9] = "Jinhua Zhao";
-	zifuchuan[10] = "ÎÄ¹áÖĞ";
-	zifuchuan[11] = "James Wen";
-	zifuchuan[12] = "ÎÂÈª";
-	zifuchuan[13] = "Quan Wen";
-	zifuchuan[14] = "ÀîÁú·É";
-	zifuchuan[15] = "Lung-fei Lee";
-	zifuchuan[16] = "·¶ÑÓÇÙ";
-	zifuchuan[17] = "Yanqin Fan";
-	zifuchuan[18] = "´óÎÀ¡¤¿Æ×È";
-	zifuchuan[19] = "David M. Kotz";
-	zifuchuan[20] = "ÂíµÂ±ó";
-	zifuchuan[21] = "Debin Ma";
-	zifuchuan[22] = "½ª½üÓÂ";
-	zifuchuan[23] = "George J. Jiang";
-	zifuchuan[24] = "Greif";
-	zifuchuan[25] = "Greif";
-	zifuchuan[26] = "ÁõÀşÀş";
-	zifuchuan[27] = "Lili Liu";
-	zifuchuan[28] = "ÖÜË¡ºë";
-	zifuchuan[29] = "Soohong Chew";
-	zifuchuan[30] = "·½ººÃ÷";
-	zifuchuan[31] = "Hanming Fang";
-	zifuchuan[32] = "Â½¶¡";
-	zifuchuan[33] = "Ding Lu";
-	zifuchuan[34] = "ÕÅĞÀ";
-	zifuchuan[35] = "Gene Chang";
-	zifuchuan[36] = "ÕÅ¿¡É­";
-	zifuchuan[37] = "Junsen Zhang";
-	zifuchuan[38] = "ºúÓ±Ò¢";
-	zifuchuan[39] = "Yingyao Hu";
+	zifuchuan[0] = "***";
+	zifuchuan[1] = "***";
+	zifuchuan[2] = "***";
+	zifuchuan[3] = "***";
+	
 
 	std::vector<string> mingancis(4);
-	mingancis[0] = "Ç§ÈË";
-	mingancis[1] = "³¤½­Ñ§Õß";
-	mingancis[2] = "ÌØÆ¸";
-	mingancis[3] = "º£ÍâÁªÏ¯ÏµÖ÷ÈÎ";
+	mingancis[0] = "**";
+	mingancis[1] = "***";
+	mingancis[2] = "****";
+	mingancis[3] = "*****";
 	int i;
 	for(i = 0; i < filelist.size(); i++)
 	{
-		//¶ÁÈ¡txtÎÄ¼ş
+		//è¯»å–txtæ–‡ä»¶
 		std::fstream infile;
 		infile.open(filelist[i], std::ios::in);
-		char s[12];             //Éè¶¨12Î»¶ÔÓÚ´æ´¢32Î»intÖµ×ã¹»  
-		itoa(i,s,10);            //itoaº¯ÊıÒà¿ÉÒÔÊµÏÖ£¬µ«ÊÇÊôÓÚCÖĞº¯Êı£¬ÔÚC++ÖĞÍÆ¼öÓÃÁ÷µÄ·½·¨  
+		char s[12];             //è®¾å®š12ä½å¯¹äºå­˜å‚¨32ä½intå€¼è¶³å¤Ÿ  
+		itoa(i,s,10);            //itoaå‡½æ•°äº¦å¯ä»¥å®ç°ï¼Œä½†æ˜¯å±äºCä¸­å‡½æ•°ï¼Œåœ¨C++ä¸­æ¨èç”¨æµçš„æ–¹æ³•  
 		std::string xx = s;  
 		int geshu = 0;
 		while(!infile.eof())
@@ -177,7 +142,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			//ss = UTF8ToGB(buffer);
 			
 
-			for(int j = 0; j < 40; j++)
+			for(int j = 0; j < zifuchuan.size(); j++)
 			{
 				fanhuizhi[j] = ss.find(zifuchuan[j]);
 			}
@@ -202,7 +167,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				}
 			}
 			bool minganci = false;
-			for(int j = 0; j < 4; j++)
+			for(int j = 0; j < mingancis.size(); j++)
 			{
 				fanhuizhi[j] = ss.find(mingancis[j]);
 				if(fanhuizhi[j] > 0)
@@ -227,7 +192,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					if(res->row_count != 0)
 					{
 						MYSQL_ROW row;
-						//È¡³ö½á¹û¼¯
+						//å–å‡ºç»“æœé›†
 						row = mysql_fetch_row(res);
 						if(row)
 						{
@@ -240,15 +205,15 @@ int _tmain(int argc, _TCHAR* argv[])
 				}*/
 				outfile << xuhao << ": " << filelist[i] << std::endl;
 				outfile << xuhao << pipeiguanjianci.c_str() << std::endl << std::endl;
-				//ÕÒµ½Êı¾İ¿âÖĞ¶ÔÓ¦µÄ±êÌâ
-				//»ñµÃÎÄÕÂµÄid
+				//æ‰¾åˆ°æ•°æ®åº“ä¸­å¯¹åº”çš„æ ‡é¢˜
+				//è·å¾—æ–‡ç« çš„id
 				xuhao = xuhao + 1;
 				break;
 			}
 		}
 		infile.close();
 	}
-	//¹Ø±ÕÊı¾İ¿â
+	//å…³é—­æ•°æ®åº“
 	//mysql_close(mydbdata);
 
 	outfile.close();
